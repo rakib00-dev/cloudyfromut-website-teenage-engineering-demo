@@ -1,101 +1,79 @@
-'use client';
+import Link from 'next/link';
+import React from 'react';
 
-import * as React from 'react';
-
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { GoTriangleDown } from 'react-icons/go';
-import HomePriceCalculator from './HomePriceCalculator';
-
-export default function Hero() {
-  const [selectedOption, setSelectedOption] = React.useState('');
-
-  const selectiveDropDowns = [
-    { title: 'Fintech Application', value: 'fintech-application' },
-    { title: 'Data Mining Tool', value: 'data-mining-tool' },
-    { title: 'Open Banking App', value: 'open-banking-app' },
-    { title: 'Marketplace', value: 'marketplace' },
-    { title: 'API', value: 'api' },
-    { title: 'Analytics / BI Dashboard', value: 'analytics-bi-dashboard' },
-    { title: 'Community / Social Network', value: 'community-social-network' },
-    {
-      title: 'Artificial Intelligence Application',
-      value: 'artificial-intelligence-application',
-    },
-    { title: 'AI on the edge', value: 'ai-on-the-edge' },
-    { title: 'Music & Entertainment App', value: 'music-entertainment-app' },
-    { title: 'Regtech Software', value: 'regtech-software' },
-    {
-      title: 'System Integration Project',
-      value: 'system-integration-project',
-    },
-    { title: 'Blockchain App', value: 'blockchain-app' },
-    { title: 'Lifestyle App', value: 'lifestyle-app' },
-    { title: 'Health & Fitness App', value: 'health-fitness-app' },
-    { title: 'Travel App', value: 'travel-app' },
-    { title: 'Sports App', value: 'sports-app' },
-  ];
-
-  console.log(selectedOption);
-
+const Hero = () => {
   return (
-    <section className="relative max-w-7xl mx-auto w-full overflow-hidden">
-      <div className="w-full px-6 md:px-12 grid gap-5 py-20 md:py-30 md:mb-20">
-        {!selectedOption && (
-          <h1 className="text-5xl md:text-6xl font-extrabold py-4 w-full md:w-[45rem] mx-auto md:text-start">
-            Pick your type of project.
-          </h1>
-        )}
-
-        <div className="flex justify-center w-full">
-          <DropdownMenu>
-            <DropdownMenuTrigger
-              asChild
-              className=" flex justify-start w-full md:w-[45rem]"
-            >
-              <Button
-                variant="outline"
-                className="flex text-md py-6 text-gray-500 justify-between border-blue-300 border"
-              >
-                {selectedOption
-                  ? `${selectedOption}`
-                  : 'Pick your type of project here'}
-                <GoTriangleDown className="fill-blue-500 " />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-70 md:min-w-3xl">
-              <DropdownMenuLabel>
-                Pick your type of project here
-              </DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuRadioGroup
-                value={selectedOption}
-                onValueChange={setSelectedOption}
-              >
-                {selectiveDropDowns.map(({ title, value }) => (
-                  <DropdownMenuRadioItem
-                    key={value}
-                    value={value}
-                    // onClick={() => setSelectedOption(title)}
-                  >
-                    {title}
-                  </DropdownMenuRadioItem>
-                ))}
-              </DropdownMenuRadioGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-        {/* {selectedOption && ( */}
-        {selectedOption && selectedOption.length > 4 && <HomePriceCalculator />}
+    <div className="grid place-items-center gap-15">
+      <img
+        src="/images/homepage/svg-image-10.svg"
+        alt="svg-image-10.svg "
+        className="w-3/5"
+      />
+      <img
+        src="/images/homepage/svg-image-11.svg"
+        alt="svg-image-11.svg "
+        className="w-4/5"
+      />
+      <img
+        src="/images/homepage/free-pc-case.webp"
+        alt="free-pc-case.webp "
+        className="md:h-[80rem] w-full"
+      />
+      <img
+        src="/images/homepage/svg-image-12.svg"
+        alt="svg-image-12.svg "
+        className="px-10 md:px-40 w-full"
+      />
+      <img
+        src="/images/homepage/svg-image-13.svg"
+        alt="svg-image-13.svg "
+        className="px-5 md:px-40 w-full"
+      />
+      <div className="grid gap-10 md:gap-20 md:py-20">
+        <Link href={'/store/computer-1'}>
+          <img
+            src="/images/homepage/svg-image-14.svg"
+            alt="svg-image-14.svg "
+            className="px-25 md:px-40 w-full"
+          />
+        </Link>
+        <Link
+          href={
+            'https://teenage.engineering/_img/689c82b9f8ec2b304f3a66dc_original.pdf'
+          }
+        >
+          <img
+            src="/images/homepage/svg-image-15.svg"
+            alt="svg-image-15.svg "
+            className="px-25 md:px-40 w-full"
+          />
+        </Link>
       </div>
-    </section>
+      <img
+        src="/images/homepage/svg-image-16.svg"
+        alt="svg-image-16.svg "
+        className="px-5 md:px-30 w-full md:pb-20"
+      />
+      <div className="w-full relative">
+        <img
+          src="/images/homepage/svg-image-17.svg"
+          alt="svg-image-17.svg "
+          className="w-1/45 absolute left-[35%] -top-[10%]"
+        />
+        <img
+          src="/images/homepage/svg-image-19.svg"
+          alt="svg-image-19.svg "
+          className="w-full"
+        />
+      </div>
+      <Link
+        href={'/newsletter'}
+        className="text-[clamp(1rem,3vw,4rem)] hover:underline hover:opacity-70 pb-10"
+      >
+        join our newsletter
+      </Link>
+    </div>
   );
-}
+};
+
+export default Hero;
