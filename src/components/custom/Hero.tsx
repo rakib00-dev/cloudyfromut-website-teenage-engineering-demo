@@ -7,7 +7,7 @@ const Hero = () => {
       <img
         src="/images/homepage/svg-image-10.svg"
         alt="svg-image-10.svg "
-        className="w-3/5"
+        className="w-3/5 mt-20"
       />
       <img
         src="/images/homepage/svg-image-11.svg"

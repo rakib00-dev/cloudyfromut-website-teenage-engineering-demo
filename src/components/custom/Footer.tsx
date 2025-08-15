@@ -39,7 +39,7 @@ const Footer = () => {
 
   return (
     <div className="w-full">
-      <div className="flex place-items-center justify-between md:items-center mx-6 md:mx-12 py-6 border-t border-gray-500 gap-2 ">
+      <div className="flex place-items-center justify-between md:items-center mx-6 md:mx-12 py-2 md:py-6 border-t border-gray-500 gap-2 ">
         <span className="text-sm text-gray-600">
           <select
             name="countries"
