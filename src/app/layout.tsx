@@ -15,11 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Custom Product & Software Development Pricing',
-  description:
-    'A break down of our Pricing at Altar.io – with tangible examples by vertical, project size, timeframe and complexity',
-  keywords:
-    'Global Advisory,Wealth Management,Asset Management,Trusts,Private Wealth,Private Banking,Merchant Banking',
+  title: 'computer–2 - teenage engineering',
+  description: 'flipped out year',
+  keywords: 'tech, engineering, tech products',
 };
 
 export default function RootLayout({
