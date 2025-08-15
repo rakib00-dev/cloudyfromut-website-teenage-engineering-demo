@@ -1,8 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 @import 'tw-animate-css';
 @import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
+
+@font-face {
+  font-family: 'TT Wellingtons';
+  src: url('/font/TT Wellingtons Trial Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Wellingtons';
+  src: url('/font/TT Wellingtons Trial Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'TT Wellingtons';
+  src: url('/font/TT Wellingtons Trial Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Wellingtons';
+  src: url('/font/TT Wellingtons Trial Bold Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
 
 :root {
   /* custom */
@@ -59,7 +86,7 @@ html {
 
 body {
   background: var(--primary-background);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'TT Wellingtons', sans-serif;
 }
 
 h1,
@@ -71,7 +98,7 @@ h2,
 h3,
 a,
 li {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'TT Wellingtons', sans-serif;
 }
 
 @theme inline {
