@@ -39,9 +39,13 @@ const Footer = () => {
 
   return (
     <div className="w-full">
-      <div className="flex-col-reverse md:flex-row place-items-center flex justify-between md:items-center mx-6 md:mx-12 py-6 border-t border-gray-500 gap-2 ">
+      <div className="flex place-items-center justify-between md:items-center mx-6 md:mx-12 py-6 border-t border-gray-500 gap-2 ">
         <span className="text-sm text-gray-600">
-          <select name="countries" id="countries">
+          <select
+            name="countries"
+            id="countries"
+            className="text-[clamp(.4rem,1vw,1rem)]"
+          >
             {countries.map((e) => (
               <option value={e} className="capitalize text-gray-800">
                 {e}
@@ -49,7 +53,7 @@ const Footer = () => {
             ))}
           </select>
         </span>
-        <div className="text-sm flex gap-4">
+        <div className="text-sm flex gap-2 md:gap-4 text-[clamp(.2rem,1vw,1rem)]">
           {links.map((link, index) => (
             <Link
               key={index}
@@ -60,7 +64,7 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <span className="flex gap-5 text-gray-800">
+        <span className="flex gap-5 text-gray-800 font-bold text-[clamp(.2rem,1vw,1rem)]">
           ©{new Date().getFullYear()} teenage engineering
         </span>
       </div>
