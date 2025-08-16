@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
+import FooterTopLink from '../common/FooterTopLink';
 
 const Footer = () => {
   const countries = [
@@ -39,6 +40,7 @@ const Footer = () => {
 
   return (
     <div className="w-full">
+      <FooterTopLink text="join our newsletter" />
       <div className="flex place-items-center justify-between md:items-center mx-2 md:mx-12 py-2 md:py-6 border-t border-gray-500 gap-2 ">
         <span className="text-sm text-gray-600">
           <select

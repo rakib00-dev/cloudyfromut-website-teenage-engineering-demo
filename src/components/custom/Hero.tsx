@@ -66,12 +66,6 @@ const Hero = () => {
           className="w-full"
         />
       </div>
-      <Link
-        href={'/newsletter'}
-        className="text-[clamp(1rem,3vw,4rem)] hover:underline hover:opacity-70 pb-10"
-      >
-        join our newsletter
-      </Link>
     </div>
   );
 };
