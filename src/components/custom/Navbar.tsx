@@ -20,23 +20,13 @@ const Navbar: React.FC = () => {
     <div className="mx-auto transition-all w-full h-20 relative top-0 z-50 ">
       <nav className="relative flex  items-start top-0 px-4 md:px-12 py-4 max-w-7xl w-full h-20 m-auto lg:py-2.5 gap-5">
         <div className="grid gap-1 w-[14.28%]">
-          <Link
-            href={'/'}
-            className="text-[clamp(.8rem,3vw,4rem)]  font-extralight"
-          >
-            teenage engineering
-          </Link>
+          <NavItems title="teenage engineering" href="/" />
           <span className="text-xs text-gray-700">
             {new Date().getFullYear()} {months[new Date().getMonth()]}
           </span>
         </div>
         <div className="grid gap-1 w-[14.28%]">
-          <Link
-            href={'/products'}
-            className="text-[clamp(.8rem,3vw,4rem)]  font-extralight"
-          >
-            products
-          </Link>
+          <NavItems title="products" href="/products" />
 
           <span className="grid *:text-xs">
             <Link href={'/products/audio-&-synthesizers'}>
@@ -56,12 +46,7 @@ const Navbar: React.FC = () => {
             className=" brightness-0 size-4 md:size-20"
           />
           <div>
-            <Link
-              href={'/products'}
-              className="text-[clamp(.8rem,3vw,4rem)]  font-extralight"
-            >
-              store
-            </Link>
+            <NavItems href="/store" title="store" />
 
             <span className="grid *:text-xs">
               <Link href={'/store'}>visit store</Link>
@@ -87,12 +72,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <div>
-            <Link
-              href={'/now'}
-              className="text-[clamp(.8rem,3vw,4rem)]  font-extralight"
-            >
-              now
-            </Link>
+            <NavItems href="/now" title="now" />
 
             <span className="grid *:text-xs">
               <Link href={'/newsletter'}>newsletter</Link>
@@ -139,12 +119,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <div>
-            <Link
-              href={'/guides'}
-              className="text-[clamp(.8rem,3vw,4rem)]  font-extralight"
-            >
-              support
-            </Link>
+            <NavItems href="/guides" title="supports" />
 
             <span className="grid *:text-xs">
               <Link href={'/guides'}>guides</Link>
@@ -155,8 +130,8 @@ const Navbar: React.FC = () => {
             </span>
           </div>
         </div>
-        <div className="flex justify-center items-start gap-1 w-[14.28%]">
-          <span className="grid text-[.1rem] md:*:text-[.4rem]">
+        <div className="flex justify-center items-start gap-1 ">
+          <span className="grid *:text-[clamp(.1rem,.1vw,.6rem)]">
             <span className="s jp jph">10代工学は未来の製品と</span>
             <span className="s jp jph">コミュニケーションを生</span>
             <span className="s jp jph">み出すスタジオです。</span>
@@ -202,3 +177,21 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
+interface NavItemsTypes {
+  href: string;
+  title: string;
+}
+
+const NavItems = ({ href = '', title }: NavItemsTypes) => {
+  return (
+    <>
+      <Link
+        href={href}
+        className="text-[clamp(.3rem,1vw+.5rem,1.5rem)] font-extralight leading-tight"
+      >
+        {title}
+      </Link>
+    </>
+  );
+};
