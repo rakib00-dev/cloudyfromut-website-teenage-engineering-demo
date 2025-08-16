@@ -175,13 +175,13 @@ const Navbar: React.FC = () => {
         </div>
         <Link
           href={'/25-the-flipped-out-year'}
-          className="flex justify-center items-start min-w-10 max-w-35 h-auto w-full"
+          className="flex justify-center items-start "
         >
           <svg
             xmlnsXlink="http://www.w3.org/1999/xlink"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 160 80"
-            className="h-auto w-auto fill-red-500"
+            className="min-w-10 max-w-35 h-auto w-full fill-red-500"
           >
             <path
               className="fill"
