@@ -47,7 +47,7 @@ const Footer = () => {
             className="text-[clamp(.4rem,1vw,1rem)]"
           >
             {countries.map((e) => (
-              <option value={e} className="capitalize text-gray-800">
+              <option value={e} className="capitalize text-gray-800" key={e}>
                 {e}
               </option>
             ))}
