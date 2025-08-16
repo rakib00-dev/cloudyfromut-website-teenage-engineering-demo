@@ -17,7 +17,7 @@ const Hero = () => {
       <img
         src="/images/homepage/free-pc-case.webp"
         alt="free-pc-case.webp "
-        className="md:h-[80rem] w-full"
+        className="h-auto w-full"
       />
       <img
         src="/images/homepage/svg-image-12.svg"
