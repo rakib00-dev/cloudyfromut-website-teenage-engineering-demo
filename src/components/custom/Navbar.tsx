@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ReactHTMLElement, ReactNode } from 'react';
 
 const Navbar: React.FC = () => {
   const months = [
@@ -17,46 +18,53 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto transition-all w-full h-20 relative top-0 z-50 ">
-      <nav className="relative flex  items-start top-0 px-4 md:px-12 py-4 max-w-7xl w-full h-20 m-auto lg:py-2.5 gap-5">
-        <div className="grid gap-1 w-[14.28%]">
-          <NavItems title="teenage engineering" href="/" />
-          <span className="text-xs text-gray-700">
+    <div className="mx-auto transition-all w-full h-auto ">
+      <nav className="flex justify-center items-center mx-auto py-4 max-w-7xl w-full h-20 m-auto lg:py-2.5 ">
+        <div className="grid gap-1">
+          <NavItems href="/">
+            teenage <br />
+            engineering
+          </NavItems>
+          <span className="text-[clamp(.1rem,1vw+.1rem,.7rem)] text-gray-700 ">
             {new Date().getFullYear()} {months[new Date().getMonth()]}
           </span>
         </div>
-        <div className="grid gap-1 w-[14.28%]">
+        <div className="grid gap-1 ">
           <NavItems title="products" href="/products" />
 
-          <span className="grid *:text-xs">
+          <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
             <Link href={'/products/audio-&-synthesizers'}>
-              audio & synthesizers designs
-            </Link>
-            <Link href={'/products/wireless-speakers'}>
               audio & synthesizers
             </Link>
+            <Link href={'/products/wireless-speakers'}>wireless speakers</Link>
             <Link href={'/designs'}>designs</Link>
           </span>
         </div>
-        <div className="flex justify-center items-start gap-1 w-[14.28%]">
-          <img
-            src={'/images/homepage/svg-image-21.svg'}
-            alt=""
-            loading="lazy"
-            className=" brightness-0 size-4 md:size-20"
-          />
+        <div className="flex justify-center items-start gap-1 ">
+          <div className="h-auto w-full">
+            <img
+              src={'/images/homepage/svg-image-21.svg'}
+              alt=""
+              loading="lazy"
+              className="h-auto w-full max-w-[3rem] brightness-0 "
+            />
+          </div>
           <div>
             <NavItems href="/store" title="store" />
 
-            <span className="grid *:text-xs">
+            <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
               <Link href={'/store'}>visit store</Link>
               <Link href={'/store/checkout'}>checkout</Link>
             </span>
           </div>
         </div>
-        <div className="flex justify-center items-start gap-1 w-[14.28%]">
-          <div className="h-40 w-30">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 80">
+        <div className="flex justify-center items-start gap-1 ">
+          <div className="h-auto w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 85 80"
+              className="h-auto w-full max-w-[6rem]"
+            >
               <path
                 className="fill"
                 d="M75,70H25V10h50V70z M70,15H30v37.5h40V15z"
@@ -74,7 +82,7 @@ const Navbar: React.FC = () => {
           <div>
             <NavItems href="/now" title="now" />
 
-            <span className="grid *:text-xs">
+            <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
               <Link href={'/newsletter'}>newsletter</Link>
               <Link href={'instagram.com/teenageengineering'}>instagram</Link>
               <Link href={'/now'}>bog</Link>
@@ -82,9 +90,13 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-start gap-1 w-[14.28%]">
-          <div className="h-40 w-30">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 40">
+        <div className=" flex justify-center items-start gap-1 ">
+          <div className="h-auto w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 85 40"
+              className="h-auto w-full max-w-[6rem]"
+            >
               <path
                 className="fill"
                 d="M47.5,10H75v27.5H47.5V10z M18.878,37.5h27.5V10h-27.5V37.5z"
@@ -113,7 +125,7 @@ const Navbar: React.FC = () => {
                 fill="none"
                 stroke="#000000"
                 strokeWidth="0.5"
-                stroke-miterlimit="10"
+                strokeMiterlimit="10"
               />
             </svg>
           </div>
@@ -121,7 +133,7 @@ const Navbar: React.FC = () => {
           <div>
             <NavItems href="/guides" title="supports" />
 
-            <span className="grid *:text-xs">
+            <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
               <Link href={'/guides'}>guides</Link>
               <Link href={'/downloads'}>downloads</Link>
               <Link href={'https://suprot.teeange.engineering'}>
@@ -131,27 +143,45 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center items-start gap-1 ">
-          <span className="grid *:text-[clamp(.1rem,.1vw,.6rem)]">
-            <span className="s jp jph">10代工学は未来の製品と</span>
-            <span className="s jp jph">コミュニケーションを生</span>
-            <span className="s jp jph">み出すスタジオです。</span>
-            <span className="s jp jph">私たちのミッションは</span>
-            <span className="s jp jph">先端工学を用いて上質で</span>
-            <span className="s jp jph">機能的なデザインの</span>
-            <span className="s jp jph">製品を作り出すことです。</span>
-            <span className="s jp jph">是非、新たなスタイルで</span>
-            <span className="s jp jph">音楽をお楽しみください。</span>
-          </span>
+          {/* <span className="grid ">
+            <span className="s jp jph text-[.5rem]">
+              10代工学は未来の製品と
+              <br />
+              コミュニケーションを生
+              <br />
+              み出すスタジオです。
+              <br />
+              私たちのミッションは
+              <br />
+              先端工学を用いて上質で
+              <br />
+              機能的なデザインの
+              <br />
+              製品を作り出すことです。
+              <br />
+              是非、新たなスタイルで
+              <br />
+              音楽をお楽しみください。
+            </span>
+          </span> */}
+
+          <div className="h-auto w-full max-w-20">
+            <img
+              src="/images/homepage/japanease.png"
+              alt=""
+              className="w-full"
+            />
+          </div>
         </div>
         <Link
           href={'/25-the-flipped-out-year'}
-          className="flex justify-center items-start w-[14.28%]"
+          className="flex justify-center items-start max-w-15 h-auto w-full"
         >
           <svg
             xmlnsXlink="http://www.w3.org/1999/xlink"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 160 80"
-            className="h-20 fill-red-500"
+            className="h-auto w-auto fill-red-500"
           >
             <path
               className="fill"
@@ -180,17 +210,18 @@ export default Navbar;
 
 interface NavItemsTypes {
   href: string;
-  title: string;
+  title?: ReactNode;
+  children?: ReactNode;
 }
 
-const NavItems = ({ href = '', title }: NavItemsTypes) => {
+const NavItems = ({ href = '', title, children }: NavItemsTypes) => {
   return (
     <>
       <Link
         href={href}
-        className="text-[clamp(.3rem,1vw+.5rem,1.5rem)] font-extralight leading-tight"
+        className="text-[clamp(.05rem,2vw,1.4rem)] font-extralight leading-tight"
       >
-        {title}
+        {title ?? children}
       </Link>
     </>
   );
