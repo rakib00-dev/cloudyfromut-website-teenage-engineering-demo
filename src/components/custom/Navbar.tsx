@@ -18,21 +18,21 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="mx-auto transition-all w-full h-auto ">
-      <nav className="flex justify-center items-center mx-auto py-4 max-w-7xl w-full h-20 m-auto lg:py-2.5 ">
+    <div className="mx-auto transition-all w-full h-auto relative top-0 z-50 ">
+      <nav className="relative flex justify-center md:justify-between items-start top-0 px-2 md:px-12 py-4 max-w-7xl w-full h-20 m-auto lg:py-2.5 ">
         <div className="grid gap-1">
           <NavItems href="/">
             teenage <br />
             engineering
           </NavItems>
-          <span className="text-[clamp(.1rem,1vw+.1rem,.7rem)] text-gray-700 ">
+          <span className="text-[clamp(.02rem,1vw,.7rem)] text-gray-700 ">
             {new Date().getFullYear()} {months[new Date().getMonth()]}
           </span>
         </div>
         <div className="grid gap-1 ">
           <NavItems title="products" href="/products" />
 
-          <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
+          <span className="grid *:text-[clamp(.02rem,1vw,.7rem)]">
             <Link href={'/products/audio-&-synthesizers'}>
               audio & synthesizers
             </Link>
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
             <Link href={'/designs'}>designs</Link>
           </span>
         </div>
-        <div className="flex justify-center items-start gap-1 ">
+        <div className="flex justify-start items-start gap-2 ">
           <div className="h-auto w-full">
             <img
               src={'/images/homepage/svg-image-21.svg'}
@@ -49,16 +49,16 @@ const Navbar: React.FC = () => {
               className="h-auto w-full max-w-[3rem] brightness-0 "
             />
           </div>
-          <div>
+          <div className="flex flex-col">
             <NavItems href="/store" title="store" />
 
-            <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
+            <span className="grid *:text-[clamp(.02rem,1vw,.7rem)]">
               <Link href={'/store'}>visit store</Link>
               <Link href={'/store/checkout'}>checkout</Link>
             </span>
           </div>
         </div>
-        <div className="flex justify-center items-start gap-1 ">
+        <div className="flex justify-start items-start gap-1 ">
           <div className="h-auto w-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,10 +79,10 @@ const Navbar: React.FC = () => {
             </svg>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <NavItems href="/now" title="now" />
 
-            <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
+            <span className="grid *:text-[clamp(.02rem,1vw,.7rem)]">
               <Link href={'/newsletter'}>newsletter</Link>
               <Link href={'instagram.com/teenageengineering'}>instagram</Link>
               <Link href={'/now'}>bog</Link>
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <div className=" flex justify-center items-start gap-1 ">
+        <div className="flex justify-start items-start gap-1 ">
           <div className="h-auto w-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -130,10 +130,10 @@ const Navbar: React.FC = () => {
             </svg>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <NavItems href="/guides" title="supports" />
 
-            <span className="grid *:text-[clamp(.1rem,1vw+.1rem,.7rem)]">
+            <span className="grid *:text-[clamp(.02rem,1vw,.7rem)]">
               <Link href={'/guides'}>guides</Link>
               <Link href={'/downloads'}>downloads</Link>
               <Link href={'https://suprot.teeange.engineering'}>
@@ -165,17 +165,17 @@ const Navbar: React.FC = () => {
             </span>
           </span> */}
 
-          <div className="h-auto w-full max-w-20">
+          <div className="h-auto w-full min-w-5 px-1 max-w-20">
             <img
               src="/images/homepage/japanease.png"
               alt=""
-              className="w-full"
+              className="w-auto h-auto"
             />
           </div>
         </div>
         <Link
           href={'/25-the-flipped-out-year'}
-          className="flex justify-center items-start max-w-15 h-auto w-full"
+          className="flex justify-center items-start min-w-10 max-w-35 h-auto w-full"
         >
           <svg
             xmlnsXlink="http://www.w3.org/1999/xlink"
